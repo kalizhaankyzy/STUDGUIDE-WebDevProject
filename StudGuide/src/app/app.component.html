@@ -1,14 +1,40 @@
 <header>
-  <h1>Student Guide</h1>
+  <div class="container">
+    <div class="logo">
+      <a routerLink="/home"><img id="logo" src="assets/LogoV1.png" alt="stud_guide_logo"></a>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Search...">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
+    <div class="login">
+      <button id="sign_in_btn"><i class="fa fa-lock"></i><a href="#">Sign in</a></button> 
+      <button id="sign_up_btn"><i class="fa fa-lock"></i><a href="#">Sign up</a></button> 
+    </div>
+  </div>
+
+  <nav class="main_nav">
+    <ul>
+      <li>
+        <a routerLink="/home">Home</a>
+      </li>
+      <li>
+        <a routerLink="/about">About us</a>
+      </li>
+      <li>
+        <a routerLink="#">All</a>
+      </li>
+      <li>
+        <a routerLink="#">Entertaining</a>
+      </li>
+      <li>
+        <a routerLink="#">Food</a>
+      </li>
+      <li>
+        <a routerLink="#">Health</a>
+      </li>
+    </ul>
+  </nav>
 </header>
-<nav>
-  <ul>
-    <li>
-      <a routerLink="/home">Home</a>
-    </li>
-    <li>
-      <a routerLink="/about">About us</a>
-    </li>
-  </ul>
-</nav>
+<app-home></app-home>
 <router-outlet></router-outlet>
