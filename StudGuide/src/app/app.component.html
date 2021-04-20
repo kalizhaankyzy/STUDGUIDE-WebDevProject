@@ -14,58 +14,36 @@
   </div>
 
   <nav class="main_nav">
-    <ul>
-      <li>
-        <a routerLink="/home">Home</a>
-      </li>
-      <li>
-        <a routerLink="/about">About us</a>
-      </li>
-      <li>
-        <a routerLink="#">All</a>
-      </li>
-      <li>
-        <a routerLink="#">Entertaining</a>
-      </li>
-      <li>
-        <a routerLink="#">Food</a>
-      </li>
-      <li>
-        <a routerLink="#">Health</a>
-      </li>
-      <li>
-        <a routerLink="#">Health</a>
-      </li>
-    </ul>
+    <div>
+      <ul>
+        <li>
+          <a routerLink="/home">Home</a>
+        </li>
+        <li>
+          <a routerLink="/about">About us</a>
+        </li>
+        <li>
+          <a routerLink="/categories">All</a>
+        </li>
+      </ul>
+    </div>
+    <app-category></app-category>
   </nav>
 </header>
 
-<app-home></app-home>
-
+<!-- <app-home></app-home> -->
+<router-outlet></router-outlet>
 <footer>
   <div>
     <ul>
       <li>
-        <a routerLink="#">All</a>
-      </li>
-      <li>
-        <a routerLink="#">Entertaining</a>
-      </li>
-      <li>
-        <a routerLink="#">Food</a>
-      </li>
-      <li>
-        <a routerLink="#">Health</a>
-      </li>
-    </ul>
-  </div>
-  <div>
-    <ul>
-      <li>
         <a routerLink="/home">Home</a>
       </li>
       <li>
         <a routerLink="/about">About us</a>
+      </li>
+      <li>
+        <a routerLink="#">All</a>
       </li>
     </ul>
   </div>
@@ -78,4 +56,3 @@
   </div>
 </footer>
 
-<router-outlet></router-outlet>

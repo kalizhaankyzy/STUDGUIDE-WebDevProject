@@ -1,0 +1,8 @@
+.categories{
+    display: flex;
+    justify-content: space-evenly;
+}
+.categories li{
+    list-style: none;
+    /* display: inline; */
+}
