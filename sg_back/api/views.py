@@ -6,8 +6,8 @@ from rest_framework.views import APIView
 from rest_framework import status
 
 from rest_framework.response import Response
-from .models import Author, Category, News
-from .serializers import AuthorSerializer, CategorySerializer, NewsSerializer
+from .models import Author, Category, Course, News, CourseLevel
+from .serializers import AuthorSerializer, CategorySerializer, CourseLevelSerializer, CourseSerializer, NewsSerializer
 # Create your views here.
 # def authors_list(request):
 
@@ -54,6 +54,76 @@ def category_news(request, category_id):
     if request.method == 'GET':
         serializer = NewsSerializer(news, many=True)
         return Response(serializer.data)
+
+
+@api_view(['GET', 'POST'])
+def level_list(request):
+    if request.method == 'GET':
+        levels = CourseLevel.objects.all()
+        serializer = CourseLevelSerializer(levels, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = CourseLevelSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors)
+
+@api_view(['GET', 'PUT', 'DELETE'])
+def level_detail(request, level_id):
+    try:
+        level = CourseLevel.objects.get(id=level_id)
+    except CourseLevel.DoesNotExist as e:
+        return Response({'message': str(e)}, status=400)
+
+    if request.method == 'GET':
+        serializer = CourseLevelSerializer(level)
+        return Response(serializer.data)
+    elif request.method == 'PUT':
+        serializer = CourseLevelSerializer(instance=level, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors)
+    elif request.method == 'DELETE':
+        level.delete()
+        return Response({'message': 'deleted'}, status=204)
+
+
+@api_view(['GET', 'POST'])
+def course_list(request):
+    if request.method == 'GET':
+        courses = Course.objects.all()
+        serializer = CourseSerializer(courses, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = CourseSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors)
+
+@api_view(['GET', 'PUT', 'DELETE'])
+def course_detail(request, course_id):
+    try:
+        course = Course.objects.get(id=course_id)
+    except Course.DoesNotExist as e:
+        return Response({'message': str(e)}, status=400)
+
+    if request.method == 'GET':
+        serializer = CourseSerializer(course)
+        return Response(serializer.data)
+    elif request.method == 'PUT':
+        serializer = CourseSerializer(instance=course, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors)
+    elif request.method == 'DELETE':
+        course.delete()
+        return Response({'message': 'deleted'}, status=204)
 
 class author_list(APIView):
     def get(self, request):

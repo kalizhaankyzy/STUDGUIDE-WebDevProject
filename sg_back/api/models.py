@@ -12,5 +12,16 @@ class Author(models.Model):
 
 class News(models.Model):
     title = models.TextField(default='Title')
+    text = models.TextField(default='Text')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='news')
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
+
+class CourseLevel(models.Model):
+    name = models.TextField(default="Beginner")
+
+class Course(models.Model):
+    name = models.TextField(null=False)
+    rate = models.FloatField()
+    level = models.ForeignKey(CourseLevel, on_delete=models.CASCADE, related_name="courses")
+    price = models.FloatField()
+    description = models.TextField(default="missing course description")

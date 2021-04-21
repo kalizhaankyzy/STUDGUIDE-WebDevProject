@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Author, Category, News
+from .models import Author, Category, Course, CourseLevel, News
 
 
 class CategorySerializer(serializers.Serializer):
@@ -15,7 +15,20 @@ class CategorySerializer(serializers.Serializer):
         instance.name = validated_data['name']
         instance.save()
         return instance
-    
+
+class CourseLevelSerializer(serializers.Serializer):
+    id = serializers.IntegerField(read_only=True)
+    name = serializers.CharField()
+
+    def create(self, validated_data):
+        level = CourseLevel.objects.create(name=validated_data['name'])
+        return level
+
+    def update(self, instance, validated_data):
+        instance.name = validated_data['name']
+        instance.save()
+        return instance
+
 class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Author
@@ -29,3 +42,10 @@ class NewsSerializer(serializers.ModelSerializer):
     class Meta:
         model = News
         fields = ('id', 'title', 'category', 'category_id', 'author', 'author_id',)
+
+class CourseSerializer(serializers.ModelSerializer):
+    level = CourseLevelSerializer(read_only = True)
+    level_id = serializers.IntegerField(write_only=True)
+    class Meta:
+        model = Course
+        fields = ('id', 'name', 'rate', 'level', 'price', 'description', 'level_id',)
