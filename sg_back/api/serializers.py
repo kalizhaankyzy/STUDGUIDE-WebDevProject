@@ -41,7 +41,7 @@ class NewsSerializer(serializers.ModelSerializer):
     author_id = serializers.IntegerField(write_only=True)
     class Meta:
         model = News
-        fields = ('id', 'title', 'category', 'category_id', 'author', 'author_id',)
+        fields = ('id', 'title', 'text', 'description', 'category', 'category_id', 'author', 'author_id',)
 
 class CourseSerializer(serializers.ModelSerializer):
     level = CourseLevelSerializer(read_only = True)

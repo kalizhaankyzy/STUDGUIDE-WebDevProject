@@ -12,7 +12,8 @@ class Author(models.Model):
 
 class News(models.Model):
     title = models.TextField(default='Title')
-    text = models.TextField(default='Text')
+    description = models.TextField(default='missing news description')
+    text = models.TextField(default='missing news details...')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='news')
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
 
