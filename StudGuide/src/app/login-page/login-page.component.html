@@ -1,0 +1,29 @@
+<body>
+
+    <div class="login">
+      <form>
+        <div class="first-part">
+          <input [(ngModel)]= "username" type="text" name="email-or-phone" required placeholder="Email or phone number" >
+        </div>
+    
+        <div class="first-part">
+          <input [(ngModel)]= "password" type="password" name="password" required placeholder="Password">
+        </div>
+    
+        <div class="first-part">
+          <a (click)="login()"><input type="submit" value="Login"></a>
+        </div>
+    
+        <div id="forget-password">
+          <a href="" >Forget password?</a>
+        </div>
+    
+        <div id="create-account">
+          <a href="">Create an account</a>
+        </div>
+      </form>
+    </div>
+    
+    
+</body>
+    

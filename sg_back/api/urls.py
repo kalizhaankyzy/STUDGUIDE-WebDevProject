@@ -11,5 +11,5 @@ urlpatterns = [
     path('categories/<int:category_id>/news/', category_news),
     path('news/', news_list.as_view()),
     path('news/<int:news_id>', news_detail.as_view()),
-    
+    path('login/', obtain_jwt_token),
 ]

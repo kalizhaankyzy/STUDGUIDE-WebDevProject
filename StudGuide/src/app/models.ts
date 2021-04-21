@@ -14,3 +14,7 @@ export interface News{
     category_id: number;
     author_id: number;
 }
+
+export interface AuthToken{
+    token: string;
+}

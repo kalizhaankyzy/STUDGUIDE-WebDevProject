@@ -8,6 +8,8 @@ import { AboutComponent } from './about/about.component';
 import { CategoryComponent } from './category/category.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NewsComponent } from './news/news.component';
+import { LoginPageComponent } from './login-page/login-page.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { NewsComponent } from './news/news.component';
     HomeComponent,
     AboutComponent,
     CategoryComponent,
-    NewsComponent
+    NewsComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
