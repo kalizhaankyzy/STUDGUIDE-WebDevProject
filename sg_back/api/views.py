@@ -3,7 +3,8 @@ from rest_framework.decorators import api_view
 from django.shortcuts import Http404
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework import status
+from rest_framework import status, generics
+from rest_framework.permissions import IsAuthenticated
 
 from rest_framework.response import Response
 from .models import Author, Category, Course, News, CourseLevel
@@ -90,12 +91,19 @@ def level_detail(request, level_id):
         level.delete()
         return Response({'message': 'deleted'}, status=204)
 
+# class course_list(generics.ListCreateAPIView):
+#     # def get_queryset(self):
+#     #     return Category.objects.all()
+#     queryset = Category.objects.all()
+#     serializer_class = CourseSerializer
+#     # permission_classes = (IsAuthenticated,)
 
 @api_view(['GET', 'POST'])
 def course_list(request):
     if request.method == 'GET':
         courses = Course.objects.all()
         serializer = CourseSerializer(courses, many=True)
+        permission_classes = (IsAuthenticated,)
         return Response(serializer.data)
 
     elif request.method == 'POST':
