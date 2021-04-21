@@ -15,7 +15,8 @@ const routes: Routes = [
   {path: 'signUp', component: SignUpComponent},
   {path: 'courses', component: CoursesComponent},
   // {path: 'news/', component: },
-  {path: 'news/:category_id', component: NewsComponent},
+  {path: 'categories/news/:category_id', component: NewsComponent},
+  {path: 'news/:news_id', component: HomeComponent},
   {path: '', component: HomeComponent},
 ];
 

@@ -1,14 +1,7 @@
 <div class="categories">
     <ul *ngFor = "let category of categories">
-        <li><a [routerLink]="['/news', category.id]">
+        <li><a [routerLink]="['categories/news/', category.id]">
             {{category.name}}</a>
         </li>
     </ul>
 </div>
-
-<!-- <ul>
-  <li *ngFor="let c of categories">
-    <a [routerLink]="['/categories',c.id]"> {{c.id}}. {{c.name}} </a>
-    <p>id: {{c.id}}, name: {{c.name}}</p>
-  </li>
-</ul> -->

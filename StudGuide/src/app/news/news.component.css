@@ -1,0 +1,10 @@
+#content{
+    display: inline-block;
+    width: 80%;
+    margin: 1% 10%;
+    /* text-align: center; */
+}
+.news{
+    width: 60%;
+    padding: 2%;
+}
