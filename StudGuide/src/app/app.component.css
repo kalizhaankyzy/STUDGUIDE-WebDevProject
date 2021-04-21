@@ -4,15 +4,14 @@ header{
 }
 .container{
     width: 95%;
-    padding: 20px;
+    padding: 1.2%;
+    /* padding: 20px; */
 	margin: 0 auto;
     display:flex;
     justify-content:space-between;
     align-items: center;
 }
-/* .logo{
-    width: 35%;
-} */
+
 .logo img{
     width: 45%;
 }
@@ -69,11 +68,6 @@ header{
 #log_out_btn a{
     color: white;
 }
-/* .main_nav ul{
-    display:flex;
-    justify-content:space-between;
-    align-items: center;
-} */
 .main_nav div{
     width: 20%;
 }
@@ -83,10 +77,9 @@ header{
 }
 .main_nav{
     margin: 0;
-    /* padding: 5px; */
     display:flex;
+    justify-content: space-between;
 }
-
 .main_nav li{
     list-style: none;
     display: inline;

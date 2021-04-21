@@ -27,9 +27,9 @@ export class LoginPageComponent implements OnInit {
   login(){
     this.categoryService.login(this.username, this.password).subscribe((data)=>{
       localStorage.setItem('token', data.token);
+      this.logged = true;
       this.username = "";
       this.password = "";
-      this.logged = true;
       AppComponent.logged = this.logged;
     });
     

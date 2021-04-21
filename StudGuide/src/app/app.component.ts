@@ -1,7 +1,4 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { News } from './models';
-import { NewsService } from './news.service';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +22,7 @@ export class AppComponent{
     AppComponent.logged = false;
     localStorage.removeItem('token');
   }
-  
+
   created(){
     return AppComponent.created;
   }

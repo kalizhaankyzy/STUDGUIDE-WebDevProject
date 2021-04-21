@@ -5,13 +5,14 @@ body{
 .main_part{
     background-color: azure;
     color: rgb(0,157,144);
+    height: 600px;
 }
 
 .icon_part{
     margin-top: 5%;
     position: absolute;
-    
 }
+
 #icon-1{
     top:30%;
     right: 20%;
@@ -65,11 +66,10 @@ body{
 }
 .map{
 	position: absolute;
-    left: 65%;
+    right: 4%;
     top:25%;
     background-color: azure;
     color: rgb(0,157,144);
-    width: 100%;
     height: auto;
 }
 .map p{
@@ -84,7 +84,8 @@ body{
 .under_icons{
     position:absolute;
     top:70%;
-    width: 100%;
-
+}
+.under_icons button{
+    width: 30%;
 }
 
