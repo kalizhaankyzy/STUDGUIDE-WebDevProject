@@ -1,4 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,14 @@ import { Component, OnInit, Output } from '@angular/core';
 export class AppComponent{
   title = 'StudGuide';
   
+  static logged:boolean;
+
+  login(){
+    return AppComponent.logged;
+  }
+
+  logout(){
+    AppComponent.logged = false;
+    localStorage.removeItem('token');
+  }
 }

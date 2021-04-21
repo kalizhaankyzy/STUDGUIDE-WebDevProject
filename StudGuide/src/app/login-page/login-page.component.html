@@ -1,6 +1,6 @@
 <body>
 
-    <div class="login">
+    <div *ngIf="!isItLogged()" class="login">
       <form>
         <div class="first-part">
           <input [(ngModel)]= "username" type="text" name="email-or-phone" required placeholder="Email or phone number" >
@@ -24,6 +24,9 @@
       </form>
     </div>
     
+    <div *ngIf="isItLogged()">
+      <p>logged</p>
+    </div>
     
 </body>
     
