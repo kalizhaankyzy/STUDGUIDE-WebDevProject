@@ -19,7 +19,7 @@ export class NewsService {
   }
 
   getNewsById(id:number):Observable<News>{
-    return this.http.get<News>(`${this.BASE_URl}/api/news/${id}/`);
+    return this.http.get<News>(`${this.BASE_URl}/api/news/${id}`);
   }
   
   addNews(news: News):Observable<News>{

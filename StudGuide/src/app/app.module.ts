@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { CoursesComponent } from './courses/courses.component';
 import { AuthInterceptor } from './AuthInterceptor';
+import { NewsDetailComponent } from './news-detail/news-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AuthInterceptor } from './AuthInterceptor';
     LoginPageComponent,
     SignUpComponent,
     CoursesComponent,
+    NewsDetailComponent,
     // ?
   ],
   imports: [

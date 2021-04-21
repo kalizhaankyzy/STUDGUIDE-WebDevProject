@@ -13,7 +13,9 @@ export interface News{
     title: string;
     text: string;
     category_id: number;
+    author: Author;
     author_id: number;
+    description: string;
 }
 export interface CourseLevel{
     id: number;
