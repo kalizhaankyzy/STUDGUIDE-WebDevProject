@@ -11,6 +11,7 @@ import { NewsComponent } from './news/news.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { CoursesComponent } from './courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     NewsComponent,
     LoginPageComponent,
     SignUpComponent,
+    CoursesComponent,
     // ?
   ],
   imports: [
