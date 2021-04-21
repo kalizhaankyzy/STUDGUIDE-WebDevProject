@@ -24,4 +24,12 @@ export class CategoryService {
       password
     });
   }
+
+  create(username: string, password: string, email: string) {
+    return this.http.post<AuthToken>(`${this.BASE_URl}/api/signUp/`,{
+      username,
+      password,
+      email
+    });
+  }
 }

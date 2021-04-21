@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { News } from './models';
+import { Author, News } from './models';
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +16,13 @@ export class NewsService {
 
   getNewsByCategory(id:number):Observable<News[]>{
     return this.http.get<News[]>(`${this.BASE_URl}/api/categories/${id}/news/`);
+  }
+
+  addNews(news: News):Observable<News>{
+    return this.http.post<News>(`${this.BASE_URl}/api/news/`, news);
+  }
+
+  addAuthor(author: Author):Observable<Author>{
+    return this.http.post<Author>(`${this.BASE_URl}/api/authors/`, author);
   }
 }

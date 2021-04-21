@@ -1,0 +1,25 @@
+<body>
+
+<div *ngIf="!isCreated()" class="create">
+    <form>
+    <div class="first-part">
+        <input [(ngModel)]= "username" type="text" name="username" required placeholder="Username" >
+    </div>
+
+    <div class="first-part">
+        <input [(ngModel)]= "email" type="text" name="email" required placeholder="Email" >
+    </div>
+
+    <div class="first-part">
+        <input [(ngModel)]= "password" type="password" name="password" required placeholder="Password">
+    </div>
+
+    <div class="first-part">
+        <a (click)="create()" routerLink="/home"><input type="submit" value="Create"></a>
+    </div>
+
+    </form>
+</div>
+
+</body>
+    

@@ -4,14 +4,14 @@
       <a routerLink="/home"><img id="logo" src="assets/LogoV1.png" alt="stud_guide_logo"></a>
     </div>
     <div class="search">
-      <input type="text" placeholder="Search...">
-      <button type="submit"><i class="fa fa-search"></i></button>
+      <input [(ngModel)]= "searchText" type="text" placeholder="Search...">
+      <button  type="submit"><i class="fa fa-search"></i></button>
+      <!-- <button  (click)="search(searchText)" type="submit"><i class="fa fa-search"></i></button> -->
     </div>
+
     <div *ngIf="!login()" class="login">
       <a routerLink="/login"><button id="sign_in_btn"><i class="fa fa-lock"></i><a href="#">Sign in</a></button></a>
       <a routerLink="/signUp"><button id="sign_up_btn"><i class="fa fa-lock"></i><a href="#">Sign up</a></button></a>
-      <!-- <button id="sign_in_btn"><i class="fa fa-lock"></i><a href="#">Sign in</a></button> 
-      <button id="sign_up_btn"><i class="fa fa-lock"></i><a href="#">Sign up</a></button>  -->
     </div>
     <div *ngIf="login()" class="logout">
       <a (click)="logout()"><button id="log_out_btn"><i class="fa fa-lock"></i><a href="#">Log out</a></button></a>
@@ -30,13 +30,15 @@
         <li>
           <a routerLink="/categories">All</a>
         </li>
+        <!-- <li>
+          <a routerLink="/add">Publish</a>
+        </li> -->
       </ul>
     </div>
     <app-category></app-category>
   </nav>
 </header>
 
-<!-- <app-home></app-home> -->
 <router-outlet></router-outlet>
 <footer>
   <div>

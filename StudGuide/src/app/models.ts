@@ -11,6 +11,7 @@ export interface Author{
 export interface News{
     id: number;
     title: string;
+    text: string;
     category_id: number;
     author_id: number;
 }
