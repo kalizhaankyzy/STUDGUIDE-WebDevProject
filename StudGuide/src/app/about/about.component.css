@@ -1,3 +1,7 @@
+body{
+    background-color: azure;
+    color: rgb(0,157,144);
+}
 .main_part{
     background-color: azure;
     color: rgb(0,157,144);
@@ -11,29 +15,29 @@
 #icon-1{
     top:30%;
     right: 20%;
-    width: 128px;
-    height: 128px;
+    width: 65%;
+    height: 65%;
 
 }
 #icon-2{
     top:30%;
     right: 40%;
-    width: 128px;
-    height: 128px;
+    width: 65%;
+    height: 65%;
  
 }
 #icon-3{
     top:30%;
     right: 60%;
-    width: 128px;
-    height: 128px;
+    width: 65%;
+    height: 65%;
 
 }
 #icon-4{
     top:30%;
     right: 80%;
-    width: 128px;
-    height: 128px;
+    width: 65%;
+    height: 65%;
 }
 .left_part{
     padding: 5%;
@@ -61,9 +65,12 @@
 }
 .map{
 	position: absolute;
-    left: 50%;
+    left: 65%;
     top:25%;
-
+    background-color: azure;
+    color: rgb(0,157,144);
+    width: 100%;
+    height: auto;
 }
 .map p{
     top:25%;
@@ -71,9 +78,13 @@
 }
 .icons{
     float: left;
-    width: 200px; ;
+    width: 128px; ;
+
 }
 .under_icons{
+    position:absolute;
+    top:70%;
     width: 100%;
+
 }
 
