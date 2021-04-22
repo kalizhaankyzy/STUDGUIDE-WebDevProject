@@ -9,7 +9,7 @@ export class CoursesService {
   BASE_URl = 'http://localhost:8000';
   constructor(private http:HttpClient) { }
 
-  getNews(): Observable<Course[]>{
+  getCourses(): Observable<Course[]>{
     return this.http.get<Course[]>(`${this.BASE_URl}/api/courses/`);
   }
 }

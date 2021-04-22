@@ -14,6 +14,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { CoursesComponent } from './courses/courses.component';
 import { AuthInterceptor } from './AuthInterceptor';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
+import { NewsListComponent } from './news-list/news-list.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NewsDetailComponent } from './news-detail/news-detail.component';
     SignUpComponent,
     CoursesComponent,
     NewsDetailComponent,
+    NewsListComponent,
     // ?
   ],
   imports: [

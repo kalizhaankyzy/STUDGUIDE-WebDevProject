@@ -6,7 +6,7 @@
             <h1>website for Students</h1>
             <p>Read and share new ideas with us</p>
         
-            <a href=""><button>Get started</button></a> 
+            <button><a routerLink = "/login">Get started</a></button>
         </div>
         
         <div class="right_side">
@@ -16,15 +16,25 @@
     </div>
 
     <div class="items">
-        <h3>News</h3>
-
+        <div class="items-content news">
+            <h2><a routerLink="/news">News</a></h2>
+            <div *ngFor="let n of news">
+                <h4>{{n.title}}</h4>
+                <h5><a class="read_btn" routerLink="/news">Read More</a></h5>
+            </div>
+        </div>
+    
+        <div class="items-content courses">
+            <h2><a routerLink="/courses">Courses</a></h2>
+            <div *ngFor="let c of courses">
+                <h4>{{c.name}}</h4>
+                <h5 style="font-weight: normal;">{{c.description}}</h5>
+                <h5><a class="read_btn" routerLink="/courses">Read More</a></h5>
+            </div>
+        </div>
+    
     </div>
-
-    <div class="items">
-        <h3>Courses</h3>
-        
-    </div>
-
+    
     <div class="reviews">
         <h2>Reviews</h2>
         <div class="review_content" *ngFor="let r of reviews">

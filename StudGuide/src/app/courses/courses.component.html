@@ -1,9 +1,18 @@
 <body>
-    <div *ngFor="let c of courses">
-        <p>Course name: {{c.name}}</p>
-        <p> Price: {{c.price}} </p>
-        <p>Rate: {{c.rate}} </p>
-        <p>Description: {{c.description}} </p>
-        <p>Level: {{c.level.name}}</p>
+    <div *ngFor="let c of courses" id="course_content">
+      <p><strong class="key-words">Course name:</strong> {{c.name}}</p>
+      <p> <strong class="key-words">Price:</strong> {{c.price}} </p>
+      <div>
+        <p><strong class="key-words">Rate:</strong> {{c.rate}} <img id="rate" src="assets/star4.png" alt="rate"></p>
+      </div>
+
+      <div>
+        <p id="description"><strong class="key-words">Description:</strong> {{c.description}} </p>
+      </div>
+
+      <div>
+        <p><strong class="key-words">Level:</strong> {{c.level.name}} <img id="level" src="assets/lvlo2.png" alt="level"></p>
+      </div>
+
     </div>
 </body>

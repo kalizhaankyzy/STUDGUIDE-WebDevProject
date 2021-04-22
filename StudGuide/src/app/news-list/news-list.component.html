@@ -1,0 +1,9 @@
+<div id="content">
+    <div *ngFor = "let n of news" class="news">
+        <h2><a [routerLink]="['/news/', n.id]">
+            {{n.title}} 
+        </a></h2>
+        <p>{{n.description}}</p>
+    </div>
+    
+</div>
