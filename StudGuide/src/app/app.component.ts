@@ -29,6 +29,11 @@ export class AppComponent{
     return AppComponent.created;
   }
 
+  search(){
+    alert(`Searching... ${this.searchText}`)
+    this.searchText = "";
+  }
+  
   addReview(){
     alert("Thank you for your response! Your review was sent.")
     this.review_email = "";

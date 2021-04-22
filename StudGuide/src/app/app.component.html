@@ -5,8 +5,7 @@
     </div>
     <div class="search">
       <input [(ngModel)]= "searchText" type="text" placeholder="Search...">
-      <button  type="submit"><i class="fa fa-search"></i></button>
-      <!-- <button  (click)="search(searchText)" type="submit"><i class="fa fa-search"></i></button> -->
+      <button (click)="search()" type="submit"><i class="fa fa-search"></i></button>
     </div>
 
     <div *ngIf="!login()" class="login">
