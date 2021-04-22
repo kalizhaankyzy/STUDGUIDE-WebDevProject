@@ -1,12 +1,8 @@
 html,body{
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     background-color: azure;
     /* margin-top: 3%; */
-    flex-wrap: wrap;
-    justify-content: space-around;
+    
     font-size: large;
     font-family: "Times New Roman";
     color: rgb(0,157,144);
@@ -14,8 +10,15 @@ html,body{
 
 }
 #course_content{
-    width: 45%;
-    margin-top: 3%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#course_content #content_detail{
+  width: 45%;
+  margin-top: 3%;
 }
 #rate{
   width: 15%;

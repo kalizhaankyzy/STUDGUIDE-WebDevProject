@@ -1,6 +1,6 @@
 <body >
-  <div *ngIf="logged">
-    <div *ngFor="let c of courses" id="course_content">
+  <div *ngIf="logged" id="course_content">
+    <div *ngFor="let c of courses" id="content_detail" >
       <p><strong class="key-words">Course name:</strong> {{c.name}}</p>
       <p> <strong class="key-words">Price:</strong> {{c.price}} </p>
       <div>
