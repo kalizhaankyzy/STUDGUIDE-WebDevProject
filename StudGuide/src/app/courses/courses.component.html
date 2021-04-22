@@ -1,4 +1,5 @@
-<body>
+<body >
+  <div *ngIf="logged">
     <div *ngFor="let c of courses" id="course_content">
       <p><strong class="key-words">Course name:</strong> {{c.name}}</p>
       <p> <strong class="key-words">Price:</strong> {{c.price}} </p>
@@ -15,4 +16,9 @@
       </div>
 
     </div>
+  </div>
+  <div *ngIf="!logged">
+    <p>To view list of courses, please <a routerLink="/login" style="text-decoration: none;">login</a></p>
+
+  </div>
 </body>
