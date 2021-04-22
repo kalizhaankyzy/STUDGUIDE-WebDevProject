@@ -1,6 +1,7 @@
 .categories{
     display: flex;
     justify-content: space-evenly;
+    padding-right: 15%;
 }
 .categories li{
     list-style: none;
