@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Author, Category, Course, CourseLevel, News
+from .models import Author, Category, Course, CourseLevel, News, Review
 
 
 class CategorySerializer(serializers.Serializer):
@@ -49,3 +49,8 @@ class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
         fields = ('id', 'name', 'rate', 'level', 'price', 'description', 'level_id',)
+
+class ReviewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Review
+        fields = ('id', 'sender', 'text',)
