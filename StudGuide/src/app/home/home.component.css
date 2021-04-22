@@ -1,8 +1,10 @@
 body{
     margin: 0;
+    background-color: azure;
+    height: 100%;
 }
 .main_content{
-    background-color: azure;
+    /* background-color: azure; */
     color: rgb(0,157,144);
 }
 .right_side{
@@ -49,5 +51,5 @@ body{
     color: rgb(0, 88, 81);
     font-size: 20px;
     padding: 10%;
-    background-color: burlywood;
+    border-top: 1px solid  rgb(255, 81, 0);
 }
