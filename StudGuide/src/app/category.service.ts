@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {AuthToken, Category} from './models';
+import {AuthToken, Category, Review} from './models';
 
 @Injectable({
   providedIn: 'root'
@@ -31,5 +31,9 @@ export class CategoryService {
       password,
       email
     });
+  }
+
+  getReviews():Observable<Review[]>{
+    return this.http.get<Review[]>(`${this.BASE_URl}/api/reviews/`);
   }
 }

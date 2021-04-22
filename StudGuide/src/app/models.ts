@@ -29,6 +29,12 @@ export interface Course{
     price: number;
     description: string;
 }
+export interface Review{
+    id:number;
+    sender: string;
+    text: string;
+}
+
 export interface AuthToken{
     token: string;
 }

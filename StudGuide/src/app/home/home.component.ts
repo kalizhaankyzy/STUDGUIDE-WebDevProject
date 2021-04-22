@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from '../category.service';
+import { Review } from '../models';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  reviews:Review[] = [];
+  constructor(private categoryService: CategoryService) { }
 
   ngOnInit(): void {
+    this.getReviews();
   }
 
+  getReviews(){
+    this.categoryService.getReviews().subscribe((data)=>{
+      this.reviews = data;
+    })
+  }
 }

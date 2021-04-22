@@ -86,9 +86,9 @@
     <div class="footer-section contact-form">
       <h2>Contact us</h2><br>
       <form action="app.component.html" method="post">
-        <input type="email" name="email" class="text-input" placeholder="Your e-mail address...">
-        <textarea name="message" class="text-input" placeholder="Your message..."></textarea>
-        <button class="submit-btn">Send</button>
+        <input [(ngModel)]="review_email" type="email" name="email" class="text-input" placeholder="Your e-mail address...">
+        <textarea [(ngModel)]="review_text" name="message" class="text-input" placeholder="Your message..."></textarea>
+        <button (click)="addReview()" class="submit-btn">Send</button>
       </form>
 
     </div>
