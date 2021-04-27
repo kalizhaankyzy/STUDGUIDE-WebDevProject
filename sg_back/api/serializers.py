@@ -48,7 +48,7 @@ class CourseSerializer(serializers.ModelSerializer):
     level_id = serializers.IntegerField(write_only=True)
     class Meta:
         model = Course
-        fields = ('id', 'name', 'rate', 'level', 'price', 'description', 'level_id',)
+        fields = ('id', 'name', 'rate', 'level', 'price', 'description', 'level_id', 'url', )
 
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:

@@ -26,6 +26,7 @@ class Course(models.Model):
     level = models.ForeignKey(CourseLevel, on_delete=models.CASCADE, related_name="courses")
     price = models.FloatField()
     description = models.TextField(default="missing course description")
+    url = models.TextField(default="#")
 
 class Review(models.Model):
     sender = models.CharField(max_length=100)

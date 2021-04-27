@@ -28,6 +28,7 @@ export interface Course{
     level_id: number;
     price: number;
     description: string;
+    url: string;
 }
 export interface Review{
     id:number;
