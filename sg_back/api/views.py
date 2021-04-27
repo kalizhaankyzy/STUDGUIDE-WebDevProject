@@ -5,10 +5,13 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status, generics
 from rest_framework.permissions import IsAuthenticated
+from django.contrib.auth.models import User
+from rest_framework import viewsets
+from rest_framework import permissions
 
 from rest_framework.response import Response
 from .models import Author, Category, Course, News, CourseLevel, Review
-from .serializers import AuthorSerializer, CategorySerializer, CourseLevelSerializer, CourseSerializer, NewsSerializer, ReviewSerializer
+from .serializers import AuthorSerializer, CategorySerializer, CourseLevelSerializer, CourseSerializer, NewsSerializer, ReviewSerializer, UserSerializer
 # Create your views here.
 # def authors_list(request):
 
@@ -221,3 +224,7 @@ class review_list(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all().order_by('-date_joined')
+    serializer_class = UserSerializer

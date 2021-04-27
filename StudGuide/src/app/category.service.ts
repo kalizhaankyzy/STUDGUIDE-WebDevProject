@@ -25,12 +25,8 @@ export class CategoryService {
     });
   }
 
-  create(username: string, password: string, email: string) {
-    return this.http.post<AuthToken>(`${this.BASE_URl}/api/signUp/`,{
-      username,
-      password,
-      email
-    });
+  registerUser(userData):Observable<any>{
+    return this.http.post(`${this.BASE_URl}/api/users/`, userData);
   }
 
   getReviews():Observable<Review[]>{

@@ -1,9 +1,14 @@
-from django.urls import path
+from django.urls import path, include
 from rest_framework_jwt.views import obtain_jwt_token
 from rest_framework.urlpatterns import format_suffix_patterns
+from rest_framework import routers
+from .views import UserViewSet, author_detail, author_list, category_list, category_detail, category_news, course_detail, course_list, level_detail, level_list, news_detail, news_list, review_list
 
-from .views import author_detail, author_list, category_list, category_detail, category_news, course_detail, course_list, level_detail, level_list, news_detail, news_list, review_list
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
+
 urlpatterns = [
+    path('', include(router.urls)),
     path('authors/', author_list.as_view()),
     path('authors/<int:author_id>/', author_detail.as_view()),
     path('categories/', category_list),

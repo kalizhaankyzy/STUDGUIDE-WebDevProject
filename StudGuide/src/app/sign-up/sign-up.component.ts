@@ -9,32 +9,28 @@ import { CategoryService } from '../category.service';
 })
 export class SignUpComponent implements OnInit {
   created = false;
-  username = "";
-  password = "";
-  email = "";
-
+  UserData;
+  
   constructor(private categoryService: CategoryService) { }
 
   ngOnInit(): void {
-    const token = localStorage.getItem('token');
-    if (token) {
-      this.created = true;
-    }
+    this.UserData = {
+      username: '',
+      password: '',
+      email: '',
+    };
   }
 
   create(){
-    this.categoryService.create(this.username, this.password, this.email).subscribe((data)=>{
-      localStorage.setItem('token', data.token);
-      this.username = "";
-      this.password = "";
-      this.email = "";
-      this.created = true;
-      AppComponent.created = this.created;
-    });
-
-  }
-  isCreated(){
-    return AppComponent.created;
+    this.categoryService.registerUser(this.UserData).subscribe(
+      response => {
+        alert('User ' + this.UserData.username + ' has been created.');
+      },
+      error => {
+        alert("Error");
+        // console.log("Error: ", error);
+      }
+    );
   }
 
 }

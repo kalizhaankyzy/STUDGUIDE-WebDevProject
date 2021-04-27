@@ -1,29 +1,28 @@
 <body>
-
-    <div *ngIf="!isCreated()" class="create">
+    <div class="create">
         <form>
-        <div class="first-part">
-            <input [(ngModel)]= "username" type="text" name="username" required placeholder="Username" >
-        </div>
+            <div class="first-part">
+                <input [(ngModel)]= "UserData.username" type="text" name="username" required placeholder="Username" >
+            </div>
 
-        <div class="first-part">
-            <input [(ngModel)]= "email" type="text" name="email" required placeholder="Email" >
-        </div>
+            <div class="first-part">
+                <input [(ngModel)]= "UserData.email" type="text" name="email" required placeholder="Email" >
+            </div>
 
-        <div class="first-part">
-            <input [(ngModel)]= "password" type="password" name="password" required placeholder="Password">
-        </div>
+            <div class="first-part">
+                <input [(ngModel)]= "UserData.password" type="password" name="password" required placeholder="Password">
+            </div>
 
-        <div class="first-part">
-            <a (click)="create()" routerLink="/home"><input type="submit" value="Create"></a>
-        </div>
+            <div class="first-part">
+                <a (click)="create()" routerLink="/login"><input type="submit" value="Create"></a>
+                
+            </div>
 
-        <div id="acc_exists">
-            <a routerLink = "/login">Already have an account?</a>
-        </div>
-
+            <div id="acc_exists">
+                <a routerLink = "/login">Already have an account?</a>
+            </div>
         </form>
-    </div>
 
+    </div>
 </body>
     

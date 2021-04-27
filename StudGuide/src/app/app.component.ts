@@ -9,7 +9,6 @@ export class AppComponent{
   title = 'StudGuide';
   
   static logged:boolean;
-  static created:boolean;
   searchText = "";
 
   review_email = "";
@@ -20,13 +19,10 @@ export class AppComponent{
   login(){
     return AppComponent.logged;
   }
+
   logout(){
     AppComponent.logged = false;
     localStorage.removeItem('token');
-  }
-
-  created(){
-    return AppComponent.created;
   }
 
   search(){
