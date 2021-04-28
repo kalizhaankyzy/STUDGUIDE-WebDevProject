@@ -37,7 +37,7 @@
     
     <div class="reviews">
         <h2>Reviews</h2>
-        <div class="review_content" *ngFor="let r of reviews">
+        <div class="review_content" *ngFor="let r of reviews.slice(0,7)">
             <p >{{r.text}}</p>
             <p id="sender">{{r.sender}}</p>
         </div>

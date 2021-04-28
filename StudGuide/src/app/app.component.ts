@@ -11,8 +11,7 @@ export class AppComponent{
   static logged:boolean;
   searchText = "";
 
-  review_email = "";
-  review_text = "";
+ 
   constructor(){}
 
 
@@ -30,9 +29,5 @@ export class AppComponent{
     this.searchText = "";
   }
   
-  addReview(){
-    alert("Thank you for your response! Your review was sent.")
-    this.review_email = "";
-    this.review_text = "";
-  }
+  
 }

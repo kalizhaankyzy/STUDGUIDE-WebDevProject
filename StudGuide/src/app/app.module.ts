@@ -15,6 +15,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { AuthInterceptor } from './AuthInterceptor';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { NewsListComponent } from './news-list/news-list.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { NewsListComponent } from './news-list/news-list.component';
     CoursesComponent,
     NewsDetailComponent,
     NewsListComponent,
+    FooterComponent,
     // ?
   ],
   imports: [

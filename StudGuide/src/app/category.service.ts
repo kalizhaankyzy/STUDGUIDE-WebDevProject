@@ -32,4 +32,8 @@ export class CategoryService {
   getReviews():Observable<Review[]>{
     return this.http.get<Review[]>(`${this.BASE_URl}/api/reviews/`);
   }
+
+  addReview(review):Observable<any>{
+    return this.http.post(`${this.BASE_URl}/api/reviews/`, review);
+  }
 }

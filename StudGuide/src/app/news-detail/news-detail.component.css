@@ -1,12 +1,15 @@
 body{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;   
 }
 #left_side, #right_side{
-    margin: 5% 10%;
+    margin: 5% 2%;
+}
+#left_side{
+    width: 100%;
 }
 #right_side{
-    width: 30%;
+    width: 50%;
+    /* margin-left: 2%; */
 }
