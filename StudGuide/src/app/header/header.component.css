@@ -1,0 +1,104 @@
+header{
+    background-color: rgb(203, 237, 255);
+    border-bottom: 2px solid rgb(255,81,0);
+}
+.container{
+    width: 95%;
+    padding: 1.2%;
+	margin: 0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 45%;
+}
+.search{
+    width: 110%;
+}
+.search input{
+    width: 85%;
+    height: 30px;
+    border: 2px solid rgb(0,157,144);
+    margin-right: 2px;
+}
+.search button{
+    width: 10%;
+    height: 36px;
+    color: rgb(255,81,0);
+    background-color: white;
+    border: 2px solid rgb(0,157,144);
+}
+
+#search_result{
+    position: absolute;
+    background-color: bisque;
+    width: 31.5%;
+    margin-top: 1%;
+    z-index: 1;
+}
+#search_result li{
+    list-style: none;
+}
+#search_result li a{
+    text-decoration: underline;
+}
+.login, .logout{
+    width: 100%;
+    text-align: right;
+}
+.login button, .logout button{
+    padding: 1% 2%;
+    margin: 1%;
+    border-radius: 4px;
+}
+.login button a, .logout button a{
+    margin-left: 10px;
+}
+#sign_up_btn a{
+    color: rgb(0,157,144);
+}
+#sign_up_btn{
+    background-color: white;
+    color: rgb(0,157,144);
+    border: 2px solid rgb(0,157,144);
+}
+#sign_in_btn a{
+    color: white;
+}
+#sign_in_btn{
+    background-color: rgb(255, 81, 0);
+    color: white;
+    border: 2px solid  rgb(255, 81, 0);
+}
+
+#log_out_btn{
+    background-color: rgb(0,157,144);
+    color: white;
+    border: 2px solid rgb(0,157,144);
+}
+#log_out_btn a{
+    color: white;
+}
+.main_nav div{
+    width: 20%;
+}
+.main_nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+.main_nav{
+    margin: 0;
+    display:flex;
+    justify-content: space-between;
+}
+.main_nav li{
+    list-style: none;
+    display: inline;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+

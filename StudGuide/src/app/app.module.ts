@@ -16,6 +16,7 @@ import { AuthInterceptor } from './AuthInterceptor';
 import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { NewsListComponent } from './news-list/news-list.component';
 import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FooterComponent } from './footer/footer.component';
     NewsDetailComponent,
     NewsListComponent,
     FooterComponent,
+    HeaderComponent,
     // ?
   ],
   imports: [

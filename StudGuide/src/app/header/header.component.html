@@ -1,0 +1,48 @@
+<header>
+<div class="container">
+    <div class="logo">
+    <a routerLink="/home"><img id="logo" src="assets/LogoV1.png" alt="stud_guide_logo"></a>
+    </div>
+    <div class="search">
+    <input [(ngModel)]= "searchText" type="text" placeholder="Search...">
+    <button (click)="search()" type="submit"><i class="fa fa-search"></i></button>
+
+    <div *ngIf="searching" id="search_result">
+        <ul *ngFor="let n of searchRes">
+        <li><a (click)="searching=false; searchText=''" [routerLink]="['/news/', n.id]">{{n.title}}</a></li>
+        </ul>
+    </div>
+    </div>
+
+    <div *ngIf="!login()" class="login">
+    <a routerLink="/login"><button id="sign_in_btn"><i class="fa fa-lock"></i><a href="#">Sign in</a></button></a>
+    <a routerLink="/signUp"><button id="sign_up_btn"><i class="fa fa-lock"></i><a href="#">Sign up</a></button></a>
+    </div>
+    <div *ngIf="login()" class="logout">
+    <a (click)="logout()"><button id="log_out_btn"><i class="fa fa-lock"></i><a href="#">Log out</a></button></a>
+    </div>
+</div>
+
+<nav class="main_nav">
+    <div>
+    <ul>
+        <li>
+        <a routerLink="/home">Home</a>
+        </li>
+        <li>
+        <a routerLink="/about">About us</a>
+        </li>
+        <li>
+        <a routerLink="/news">All</a>
+        </li>
+        <li>
+        <a routerLink="/courses">Courses</a>
+        </li>
+        <!-- <li>
+        <a routerLink="/add">Publish</a>
+        </li> -->
+    </ul>
+    </div>
+    <app-category></app-category>
+</nav>
+</header>

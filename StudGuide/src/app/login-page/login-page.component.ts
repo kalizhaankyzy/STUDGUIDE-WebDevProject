@@ -2,6 +2,7 @@ import { StaticSymbol } from '@angular/compiler';
 import { Component, OnInit, Output } from '@angular/core';
 import { AppComponent } from '../app.component';
 import { CategoryService } from '../category.service';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-login-page',
@@ -30,11 +31,11 @@ export class LoginPageComponent implements OnInit {
       this.logged = true;
       this.username = "";
       this.password = "";
-      AppComponent.logged = this.logged;
+      HeaderComponent.logged = this.logged;
     });
     
   }
   isItLogged(){
-    return AppComponent.logged;
+    return HeaderComponent.logged;
   }
 }

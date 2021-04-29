@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppComponent } from '../app.component';
 import { CoursesService } from '../courses.service';
+import { HeaderComponent } from '../header/header.component';
 import { Course } from '../models';
 
 @Component({
@@ -10,7 +10,7 @@ import { Course } from '../models';
 })
 export class CoursesComponent implements OnInit {
   courses: Course[]=[];
-  logged = AppComponent.logged;
+  logged = HeaderComponent.logged;
   constructor(private coursesService: CoursesService) { }
 
   ngOnInit(): void {
