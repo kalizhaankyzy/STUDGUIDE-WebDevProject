@@ -30,6 +30,20 @@ header{
     background-color: white;
     border: 2px solid rgb(0,157,144);
 }
+
+#search_result{
+    position: absolute;
+    background-color: bisque;
+    width: 31.5%;
+    margin-top: 1%;
+    z-index: 1;
+}
+#search_result li{
+    list-style: none;
+}
+#search_result li a{
+    text-decoration: underline;
+}
 .login, .logout{
     width: 100%;
     text-align: right;

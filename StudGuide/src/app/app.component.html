@@ -6,6 +6,12 @@
     <div class="search">
       <input [(ngModel)]= "searchText" type="text" placeholder="Search...">
       <button (click)="search()" type="submit"><i class="fa fa-search"></i></button>
+
+      <div *ngIf="searching" id="search_result">
+        <ul *ngFor="let n of news">
+          <li><a [routerLink]="['/news/', n.id]">{{n.title}}</a></li>
+        </ul>
+      </div>
     </div>
 
     <div *ngIf="!login()" class="login">
